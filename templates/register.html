@@ -1,0 +1,77 @@
+<!-- register.html -->
+
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<script src="{% static 'scripts.js' %}"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add registration form fields -->
+        <button type="submit">Register</button>
+    </form>
+</body>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="id_first_name">First Name:</label>
+            <input type="text" id="id_first_name" name="first_name">
+        </div>
+        <div class="form-field">
+            <label for="id_last_name">Last Name:</label>
+            <input type="text" id="id_last_name" name="last_name">
+        </div>
+        <div class="form-field">
+            <label for="id_date_of_birth">Date of Birth:</label>
+            <input type="date" id="id_date_of_birth" name="date_of_birth">
+        </div>
+        <div class="form-field">
+            <label for="id_gender">Gender:</label>
+            <select id="id_gender" name="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="O">Other</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="id_contact_number">Contact Number:</label>
+            <input type="text" id="id_contact_number" name="contact_number">
+        </div>
+        <div class="form-field">
+            <label for="id_address">Address:</label>
+            <textarea id="id_address" name="address"></textarea>
+        </div>
+        <!-- ... other fields ... -->
+        <button type="submit">Register</button>
+    </form>
+    
+</body>
+</html>
+
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add login form fields -->
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
+
